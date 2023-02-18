@@ -1,3 +1,30 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+
+MAIN COLOR: #2f9e44 
+
+Lighter versions: 
+Buttons-font - #d3f9d8
+Button-secondary-hover #8ce99a
+
+Darker
+Button-main-background - #2b8a3e
+
+
+BORDER RADIUS: 
+BUTTONS - 0.4 rem
+
+
+
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +40,24 @@ body {
   color: #333;
   font-size: 1.6rem;
   line-height: 1;
+  overflow: overlay;
+}
+
+body::-webkit-scrollbar {
+  background-color: #0000;
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2f9e44;
+  border-radius: 1rem;
 }
 
 .container {
   max-width: 140rem;
   margin: 0 auto;
+}
+
+section {
+  margin-bottom: 12.8rem;
 }
