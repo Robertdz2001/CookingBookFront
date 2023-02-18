@@ -1,0 +1,97 @@
+.card {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/* dish image */
+.card-img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+/* content inside card */
+.card-content {
+  padding: 2.4rem;
+}
+
+/* recipe author */
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.card-author-img {
+  height: 5rem;
+  border-radius: 10rem;
+}
+
+.card-author-info {
+  height: 5rem;
+  width: 100%;
+}
+
+.card-author-info > span {
+  display: block;
+  padding: 0.1rem;
+}
+
+.card-recipe {
+  /* tu nic nie ma */
+}
+
+.card-recipe-header {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.card-recipe-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #666;
+  font-size: 1.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.recipe-info-value {
+  font-weight: 500;
+}
+
+.card-icon {
+  height: 2.4rem;
+  stroke: #2f9e44;
+}
+
+.card-recipe-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.recipe-column-text {
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+}
+.recipe-column-text.value {
+  font-weight: 500;
+}
+
+.icons {
+  margin-right: 2.4rem;
+}
+
+.card-btn {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  transform: translate(-100%, -100%);
+}
