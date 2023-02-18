@@ -1,0 +1,161 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+
+MAIN COLOR: #2f9e44 
+
+Lighter versions: 
+Buttons-font - #d3f9d8
+Button-secondary-hover #8ce99a
+
+Darker
+Button-main-background - #2b8a3e
+
+
+BORDER RADIUS: 
+BUTTONS - 0.4 rem
+
+
+
+*/
+
+.hero-section {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(34, 34, 34, 0.8) 40%,
+      rgba(34, 34, 34, 0.6) 60%,
+      rgba(34, 34, 34, 0.4) 80%,
+      rgba(34, 34, 34, 0.2) 100%
+    ),
+    url("/images/hero.jpg");
+  background-size: cover;
+
+  position: relative;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.hero-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem 3.2rem;
+  align-items: center;
+}
+
+button {
+  font-family: "Rubik", sans-serif;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  font-size: 2.4rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.4rem;
+  transition: all 0.3s;
+}
+
+.nav-button {
+  font-size: 1.8rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.4rem;
+}
+
+.btn--main {
+  background-color: #2f9e44;
+  color: #d3f9d8;
+  font-weight: 600;
+}
+
+.btn.btn--secondary {
+  background-color: #fff;
+  font-weight: 400;
+  color: #2f9e44;
+  border: solid 1px #2f9e44;
+}
+
+.btn--secondary:hover {
+  background-color: #8ce99a;
+  color: #fff;
+  border: solid 1px #fff;
+}
+
+.btn:hover {
+  box-shadow: 0 0 3.2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  box-shadow: 0 0 2.4rem rgba(255, 255, 255, 0.2);
+}
+
+.btn--main:hover,
+.btn--main:active {
+  background-color: #2b8a3e;
+}
+
+.hero-content {
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 140rem;
+  padding: 0 3.2rem;
+}
+
+.hero-content-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 2.4rem;
+
+  padding-left: 1.8rem;
+  padding-bottom: 1rem;
+  background: conic-gradient(
+      from 0deg at bottom 0.4rem left 0.4rem,
+      #0000 90deg,
+      #2b8a3e 0
+    )
+    0 100% / 20rem 5rem border-box no-repeat;
+}
+
+.hero-text {
+  font-size: 2rem;
+  margin-bottom: 4.8rem;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+
+  gap: 2.4rem;
+  width: 100%;
+}
+
+.logo-image {
+  height: 10rem;
+}
+
+a.btn {
+  text-decoration: none;
+}
