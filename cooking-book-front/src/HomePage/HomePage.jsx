@@ -7,6 +7,8 @@ function HomePage() {
       <HeroSection />
       <main>
         <CardSection />
+        {/* bloczek do wyjebania */}
+        <div style={{ height: 500 + "px" }}></div>
       </main>
     </>
   );

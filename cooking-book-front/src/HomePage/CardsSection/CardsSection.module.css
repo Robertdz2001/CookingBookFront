@@ -31,16 +31,6 @@ BUTTONS - 0.4 rem
   align-items: center;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.cards-heading {
-  font-size: 4.4rem;
-  margin-bottom: 9.6rem;
-}
-
 .cards-subheading {
   color: #2f9e44;
   font-weight: 600;
@@ -48,4 +38,15 @@ BUTTONS - 0.4 rem
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 1.6rem;
+}
+
+.cards-heading {
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 40rem 40rem 40rem;
+  column-gap: 6.4rem;
 }
