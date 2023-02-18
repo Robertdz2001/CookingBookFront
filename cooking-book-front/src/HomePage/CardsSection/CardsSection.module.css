@@ -1,0 +1,51 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+
+MAIN COLOR: #2f9e44 
+
+Lighter versions: 
+Buttons-font - #d3f9d8
+Button-secondary-hover #8ce99a
+
+Darker
+Button-main-background - #2b8a3e
+
+
+BORDER RADIUS: 
+BUTTONS - 0.4 rem
+
+
+
+*/
+
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards-heading {
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+}
+
+.cards-subheading {
+  color: #2f9e44;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.6rem;
+}
