@@ -2,39 +2,36 @@ import classes from "./Card.module.css";
 import classesApp from "../../App.module.css";
 import CardIcons from "./CardIcons";
 
-function Card() {
+function Card(props) {
   return (
     <div className={classes["card"]}>
-      <img src="./images/pizza.jpg" className={classes["card-img"]} />
+      <img src={props.recipeImg} className={classes["card-img"]} />
 
       <div className={classes["card-content"]}>
         <div className={classes["card-author"]}>
-          <img
-            className={classes["card-author-img"]}
-            src="images/customer-1.jpg"
-          />
+          <img className={classes["card-author-img"]} src={props.userImg} />
           <div className={classes["card-author-info"]}>
             <span>Recipe created by:</span>
-            <span>User (rating) (recipes)</span>
+            <span>{props.user}</span>
           </div>
         </div>
 
         <div className={classes["card-recipe"]}>
-          <h4 className={classes["card-recipe-header"]}>Neapolitan Pizza</h4>
+          <h4 className={classes["card-recipe-header"]}>{props.title}</h4>
           <div className={classes["card-recipe-info"]}>
             <CardIcons />
             <div className={classes["card-recipe-column"]}>
               <span
                 className={`${classes["recipe-column-text"]} ${classes["value"]}`}>
-                1200
+                {props.calories}
               </span>
               <span
                 className={`${classes["recipe-column-text"]} ${classes["value"]}`}>
-                4.3
+                {props.rating}
               </span>
               <span
                 className={`${classes["recipe-column-text"]} ${classes["value"]}`}>
-                60
+                {props.time}
               </span>
             </div>
             <div className={classes["card-recipe-column"]}>
