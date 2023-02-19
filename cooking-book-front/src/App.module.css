@@ -83,7 +83,7 @@ button {
   transition: all 0.3s;
 }
 
-.btn.btn--secondary {
+.btn--secondary {
   background-color: #fff;
   font-weight: 400;
   color: #2f9e44;
