@@ -112,6 +112,12 @@ function CreateSection() {
                 stroke-linejoin="round"
                 stroke-width="16"></path>
             </svg>
+
+            <h4 className={classes["icon-item-heading"]}>Ingredients</h4>
+            <p className={classes["icon-item-text"]}>
+              Make sure that users will gather all the necessary components
+              beforehand by preparing a list of ingredients.
+            </p>
           </div>
           <div className={classes["icon-list-item"]}>
             <svg
@@ -127,6 +133,15 @@ function CreateSection() {
                 stroke-linejoin="round"
                 stroke-width="16"></path>
             </svg>
+            <div className={classes["icon-item-container"]}>
+              <div className={classes["icon-item-content"]}>
+                <h4 className={classes["icon-item-heading"]}>Tools</h4>
+              </div>
+              <p className={classes["icon-item-text"]}>
+                Help users by creating a list of tools that may prove useful
+                when preparing a meal from your recipe.
+              </p>
+            </div>
           </div>
           <div className={classes["icon-list-item"]}>
             <svg
@@ -158,6 +173,15 @@ function CreateSection() {
                 stroke-width="32"
               />
             </svg>
+            <div className={classes["icon-item-container"]}>
+              <div className={classes["icon-item-content"]}>
+                <h4 className={classes["icon-item-heading"]}>Steps</h4>
+                <p className={classes["icon-item-text"]}>
+                  Facilitate the cooking process for your audience by outlining
+                  a detailed list of steps that they need to follow.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

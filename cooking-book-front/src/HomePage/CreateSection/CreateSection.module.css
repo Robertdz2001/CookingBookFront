@@ -82,7 +82,6 @@ ul {
 .secondary-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 6.4rem;
 }
 
@@ -95,14 +94,23 @@ ul {
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   justify-items: center;
-}
-.icon-list-item {
-  width: 80%;
-  display: flex;
-  justify-content: center;
+  gap: 20rem;
 }
 
 .icon-secondary {
   stroke: #2f9e44;
   height: 3.6rem;
+  width: 3.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.icon-item-heading {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.icon-item-text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #666;
 }
