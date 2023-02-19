@@ -1,13 +1,13 @@
 import HeroSection from "./HeroSection/HeroSection";
 import CardSection from "./CardsSection/CardsSection";
-
+import CreateSection from "./CreateSection/CreateSection";
 function HomePage() {
   return (
     <>
       <HeroSection />
       <main>
         <CardSection />
-        {/* bloczek do wyjebania */}
+        <CreateSection />
         <div style={{ height: 500 + "px" }}></div>
       </main>
     </>
