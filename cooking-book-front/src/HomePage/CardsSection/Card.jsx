@@ -11,8 +11,8 @@ function Card(props) {
         <div className={classes["card-author"]}>
           <img className={classes["card-author-img"]} src={props.userImg} />
           <div className={classes["card-author-info"]}>
-            <span>Recipe created by:</span>
-            <span>{props.user}</span>
+            <span className={classes["created-by"]}>Created by:</span>
+            <span className={classes["username"]}>{props.user}</span>
           </div>
         </div>
 

@@ -52,7 +52,7 @@ function HeroSection() {
               Start Now
             </button>
             <a
-              href="#"
+              href="#cards-id"
               className={`${classesApp["btn"]} ${classesApp["btn--secondary"]} `}>
               Learn More &darr;
             </a>

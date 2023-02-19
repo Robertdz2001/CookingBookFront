@@ -6,6 +6,7 @@ import Card from "./Card";
 function CardsSection() {
   return (
     <section
+      id="cards-id"
       className={`${classes["cards-section"]} ${classesApp["container"]}`}>
       <span className={classes["cards-subheading"]}>Recipes</span>
       <h2 className={classes["cards-heading"]}>Explore new tastes</h2>
@@ -13,7 +14,7 @@ function CardsSection() {
         <Card
           recipeImg="images/pizza.jpg"
           title="Neopolitan Pizza"
-          user="User 1"
+          user="Cathrina"
           userImg="images/customer-1.jpg"
           calories="1200"
           rating="4.6"
@@ -22,7 +23,7 @@ function CardsSection() {
         <Card
           recipeImg="images/burger.jpg"
           title="Burger with fries"
-          user="User 2"
+          user="Viktor"
           userImg="images/customer-2.jpg"
           calories="1400"
           rating="4.8"
@@ -31,7 +32,7 @@ function CardsSection() {
         <Card
           recipeImg="images/toast.jpg"
           title="Toasts with eggs"
-          user="User 3"
+          user="Joetta"
           userImg="images/customer-3.jpg"
           calories="300"
           rating="4.4"
