@@ -113,3 +113,8 @@ BUTTONS - 0.4 rem
   height: 10rem;
   cursor: pointer;
 }
+
+.Learn {
+  position: absolute;
+  top: 100%;
+}

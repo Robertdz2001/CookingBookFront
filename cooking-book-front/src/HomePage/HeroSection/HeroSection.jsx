@@ -1,14 +1,15 @@
 import classes from "./HeroSection.module.css";
 
-function HeroSection() {
+function HeroSection(props) {
   function refresh() {
     document.location.reload();
   }
 
   return (
     <section
-      className={`${classes["hero-section"]} ${classes["section-margin"]}`}>
-      <header className={`${classes["hero-header"]} ${classes["container"]}`}>
+      className={`${classes["hero-section"]} ${classes["section-margin"]}`}
+      ref={props.heroRef}>
+      <div className={`${classes["hero-header"]} ${classes["container"]}`}>
         <div className={classes["hero-logo"]}>
           <img
             src="/images/logo.png"
@@ -32,7 +33,7 @@ function HeroSection() {
             </li>
           </ul>
         </nav>
-      </header>
+      </div>
 
       <div className={classes["hero-content"]}>
         <div className={classes["hero-content-box"]}>
@@ -50,13 +51,14 @@ function HeroSection() {
               Start Now
             </button>
             <a
-              href="#cards-id"
+              href="#Learn"
               className={`${classes["btn"]} ${classes["btn--secondary"]} `}>
               Learn More &darr;
             </a>
           </div>
         </div>
       </div>
+      <div id="Learn" className={classes.Learn}></div>
     </section>
   );
 }

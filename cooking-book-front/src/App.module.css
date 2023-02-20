@@ -43,8 +43,6 @@ body {
   font-size: 1.6rem;
   line-height: 1;
   overflow: overlay;
-  /* background-image: url("images/background.png");
-  background-size: 100% auto; */
 }
 
 body::-webkit-scrollbar {
