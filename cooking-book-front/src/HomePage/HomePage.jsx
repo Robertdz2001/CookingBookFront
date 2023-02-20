@@ -2,6 +2,8 @@ import HeroSection from "./HeroSection/HeroSection";
 import CardSection from "./CardsSection/CardsSection";
 import CreateSection from "./CreateSection/CreateSection";
 import ReviewsSection from "./ReviewsSection/ReviewsSection";
+import CallToAction from "./CallToAction/CallToAction";
+
 function HomePage() {
   return (
     <>
@@ -10,6 +12,7 @@ function HomePage() {
         <CardSection />
         <CreateSection />
         <ReviewsSection />
+        <CallToAction />
         <div style={{ height: 500 + "px" }}></div>
       </main>
     </>

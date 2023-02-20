@@ -2,7 +2,7 @@ import classes from "./ReviewsSection.module.css";
 
 function ReviewsSection() {
   return (
-    <section className={classes["container"]}>
+    <section className={`${classes["container"]} ${classes["section-margin"]}`}>
       <div className={classes["z-grid"]}>
         <div className={classes["z-item"]}>
           <img

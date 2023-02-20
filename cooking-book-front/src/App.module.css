@@ -58,13 +58,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 1rem;
 }
 
+section.section-margin {
+  margin-bottom: 16rem;
+}
+
 .container {
   max-width: 140rem;
   margin: 0 auto;
-}
-
-section {
-  margin-bottom: 12.8rem;
 }
 
 button {
