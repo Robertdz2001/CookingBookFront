@@ -3,7 +3,8 @@ import classesApp from "../../App.module.css";
 
 function CreateSection() {
   return (
-    <section className={`${classesApp["container"]}`}>
+    <section
+      className={`${classesApp["container"]} ${classes["create-section"]}`}>
       <div className={classes["heading-container"]}>
         <div className={classes["heading"]}>
           <img
