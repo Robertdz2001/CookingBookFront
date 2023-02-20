@@ -4,6 +4,10 @@
  */
 @import "../../App.module.css";
 
+.create-section {
+  margin-bottom: 16rem;
+}
+
 .heading-container {
   width: 100%;
   display: flex;
