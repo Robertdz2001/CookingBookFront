@@ -1,10 +1,9 @@
 import classes from "./CreateSection.module.css";
-import classesApp from "../../App.module.css";
 
 function CreateSection() {
   return (
     <section
-      className={`${classesApp["container"]} ${classes["create-section"]}`}>
+      className={`${classes["container"]} ${classes["create-section"]} ${classes["section-margin"]}`}>
       <div className={classes["heading-container"]}>
         <div className={classes["heading"]}>
           <img
@@ -82,7 +81,7 @@ function CreateSection() {
             </div>
           </div>
           <button
-            className={`${classes["join-btn"]} ${classesApp["btn"]} ${classes["btn--secondary"]}`}>
+            className={`${classes["join-btn"]} ${classes["btn"]} ${classes["btn--secondary"]}`}>
             Join Now!
           </button>
         </div>
@@ -103,15 +102,15 @@ function CreateSection() {
               <path
                 d="M16,184C247.8,234.7,223.8,75.5,217.2,45a8.2,8.2,0,0,0-6.2-6.2C180.5,32.2,21.3,8.2,72,240"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"></path>
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="16"></path>
               <path
                 d="M201.3,152A96,96,0,0,1,104,54.6"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"></path>
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="16"></path>
             </svg>
 
             <h4 className={classes["icon-item-heading"]}>Ingredients</h4>
@@ -130,9 +129,9 @@ function CreateSection() {
               <path
                 d="M218.9,71a63.9,63.9,0,0,1-89.8,81h0L73,217a24,24,0,0,1-34-34l65-56.1h0a63.9,63.9,0,0,1,81-89.8L143,79l5.7,28.3L177,113Z"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"></path>
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="16"></path>
             </svg>
             <div className={classes["icon-item-container"]}>
               <div className={classes["icon-item-content"]}>
@@ -152,26 +151,26 @@ function CreateSection() {
               <path
                 d="M200,246.84c8.81,58.62-7.33,90.67-52.91,97.41-50.65,7.49-71.52-26.44-80.33-85.06-11.85-78.88,16-127.94,55.71-131.1C158.61,125.22,191.18,188.23,200,246.84Z"
                 fill="none"
-                stroke-miterlimit="10"
-                stroke-width="32"
+                strokeMiterlimit="10"
+                strokeWidth="32"
               />
               <path
                 d="M223.65,409.53c3.13,33.28-14.86,64.34-42,69.66-27.4,5.36-58.71-16.37-65.09-49.19s17.75-34.56,47.32-40.21S219.87,369.39,223.65,409.53Z"
                 fill="none"
-                stroke-miterlimit="10"
-                stroke-width="32"
+                strokeMiterlimit="10"
+                strokeWidth="32"
               />
               <path
                 d="M312,150.83c-8.81,58.62,7.33,90.67,52.9,97.41,50.66,7.49,71.52-26.44,80.33-85.06,11.86-78.89-16-128.22-55.7-131.1C353.13,29.44,320.82,92.21,312,150.83Z"
                 fill="none"
-                stroke-miterlimit="10"
-                stroke-width="32"
+                strokeMiterlimit="10"
+                strokeWidth="32"
               />
               <path
                 d="M288.35,313.53c-3.13,33.27,14.86,64.34,42,69.66,27.4,5.36,58.71-16.37,65.09-49.19s-17.75-34.56-47.32-40.22S292.13,273.38,288.35,313.53Z"
                 fill="none"
-                stroke-miterlimit="10"
-                stroke-width="32"
+                strokeMiterlimit="10"
+                strokeWidth="32"
               />
             </svg>
             <div className={classes["icon-item-container"]}>

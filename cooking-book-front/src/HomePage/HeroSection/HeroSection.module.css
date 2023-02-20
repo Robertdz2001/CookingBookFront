@@ -25,6 +25,8 @@ BUTTONS - 0.4 rem
 
 */
 
+@import "../../App.module.css";
+
 .hero-section {
   height: 100vh;
   background-image: linear-gradient(

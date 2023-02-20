@@ -1,5 +1,4 @@
 import classes from "./HeroSection.module.css";
-import classesApp from "../../App.module.css";
 
 function HeroSection() {
   function refresh() {
@@ -7,9 +6,9 @@ function HeroSection() {
   }
 
   return (
-    <section className={classes["hero-section"]}>
-      <header
-        className={`${classes["hero-header"]} ${classesApp["container"]}`}>
+    <section
+      className={`${classes["hero-section"]} ${classes["section-margin"]}`}>
+      <header className={`${classes["hero-header"]} ${classes["container"]}`}>
         <div className={classes["hero-logo"]}>
           <img
             src="/images/logo.png"
@@ -21,13 +20,13 @@ function HeroSection() {
           <ul className={classes["nav-list"]}>
             <li>
               <button
-                className={`${classesApp["btn"]} ${classesApp["btn--secondary"]} ${classes["nav-button"]}`}>
+                className={`${classes["btn"]} ${classes["btn--secondary"]} ${classes["nav-button"]}`}>
                 Login
               </button>
             </li>
             <li>
               <button
-                className={`${classesApp["btn"]} ${classesApp["btn--main"]} ${classes["nav-button"]}`}>
+                className={`${classes["btn"]} ${classes["btn--main"]} ${classes["nav-button"]}`}>
                 Register
               </button>
             </li>
@@ -47,13 +46,12 @@ function HeroSection() {
             recipes, following other users.
           </p>
           <div className={classes["hero-buttons"]}>
-            <button
-              className={`${classesApp["btn"]} ${classesApp["btn--main"]}`}>
+            <button className={`${classes["btn"]} ${classes["btn--main"]}`}>
               Start Now
             </button>
             <a
               href="#cards-id"
-              className={`${classesApp["btn"]} ${classesApp["btn--secondary"]} `}>
+              className={`${classes["btn"]} ${classes["btn--secondary"]} `}>
               Learn More &darr;
             </a>
           </div>
