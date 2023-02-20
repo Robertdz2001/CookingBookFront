@@ -1,0 +1,24 @@
+@import "../App.module.css";
+
+.footer-text {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: #666;
+}
+
+.hero-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+  padding: 0 3.2rem;
+  align-items: center;
+  background-color: rgba(222, 222, 222, 0.8);
+}
+
+.hidden {
+  display: none;
+}
