@@ -118,3 +118,22 @@ BUTTONS - 0.4 rem
   position: absolute;
   top: 100%;
 }
+@media (max-width: 53rem) {
+  .hero-section {
+    background-image: linear-gradient(
+        to right,
+        rgba(34, 34, 34, 0.8) 40%,
+        rgba(34, 34, 34, 0.6) 60%,
+        rgba(34, 34, 34, 0.4) 80%,
+        rgba(34, 34, 34, 0.2) 100%
+      ),
+      url("/images/hero-mobile.jpg");
+    background-size: cover;
+  }
+  .hero-content-box {
+    width: 70%;
+  }
+  .hero-text {
+    font-size: 2.4rem;
+  }
+}
