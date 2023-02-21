@@ -72,3 +72,25 @@
   background: conic-gradient(from 240deg at 118% 26%, #0000, #0000, #8ce99a);
   border-bottom-right-radius: 2rem;
 }
+
+@media (max-width: 50rem) {
+  .z-grid {
+    grid-template-columns: 100rem;
+    row-gap: 6.4rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .z-title1 {
+    grid-row: 1;
+  }
+
+  .z-title3 {
+    grid-row: 5;
+  }
+}
+
+@media (max-width: 25rem) {
+  .z-grid {
+    grid-template-columns: 80rem;
+  }
+}

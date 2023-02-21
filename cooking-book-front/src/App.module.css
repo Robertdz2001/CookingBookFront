@@ -112,3 +112,54 @@ button {
 a.btn {
   text-decoration: none;
 }
+
+@media (max-width: 90rem) {
+  html {
+    font-size: 56.25%;
+  }
+  .container {
+    padding: 0 3.2rem;
+  }
+}
+
+@media (max-width: 81rem) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 72rem) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+@media (max-width: 65rem) {
+  html {
+    font-size: 40.625%;
+  }
+}
+
+@media (max-width: 59rem) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+@media (max-width: 53rem) {
+  html {
+    font-size: 34.375%;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  html {
+    font-size: 28.125%;
+  }
+}
+
+@media (max-width: 31.5rem) {
+  html {
+    font-size: 25%;
+  }
+}

@@ -48,3 +48,25 @@
   background-repeat: no-repeat;
   padding-top: 66.67%;
 }
+
+@media (max-width: 44rem) {
+  .cta {
+    width: 90%;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .cta {
+    width: 100%;
+  }
+}
+
+@media (max-width: 21rem) {
+  .cta-heading {
+    font-size: 3rem;
+  }
+  .cta-text {
+    margin-bottom: 3.2rem;
+    font-size: 1.8rem;
+  }
+}

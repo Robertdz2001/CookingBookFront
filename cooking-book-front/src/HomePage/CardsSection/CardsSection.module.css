@@ -53,3 +53,11 @@ BUTTONS - 0.4 rem
   grid-template-columns: 40rem 40rem 40rem;
   column-gap: 6.4rem;
 }
+
+@media (max-width: 50rem) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 9.6rem;
+  }
+}

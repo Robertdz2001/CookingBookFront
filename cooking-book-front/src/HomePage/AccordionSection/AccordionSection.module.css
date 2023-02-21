@@ -71,3 +71,9 @@
 .open .text {
   color: #2b8a3e;
 }
+
+@media (max-width: 37.5rem) {
+  .accordion {
+    width: 90%;
+  }
+}
