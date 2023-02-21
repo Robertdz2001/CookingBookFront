@@ -37,7 +37,7 @@ function Card(props) {
             <div className={classes["card-recipe-column"]}>
               <span className={classes["recipe-column-text"]}>calories</span>
               <span className={classes["recipe-column-text"]}>
-                rating (462)
+                rating ({props.reviewsCount})
               </span>
               <span className={classes["recipe-column-text"]}>minutes</span>
             </div>
