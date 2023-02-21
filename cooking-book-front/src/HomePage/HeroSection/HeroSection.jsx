@@ -21,13 +21,15 @@ function HeroSection(props) {
           <ul className={classes["nav-list"]}>
             <li>
               <button
-                className={`${classes["btn"]} ${classes["btn--secondary"]} ${classes["nav-button"]}`}>
+                className={`${classes["btn"]} ${classes["btn--secondary"]} ${classes["nav-button"]}`}
+                onClick={props.openLogin}>
                 Login
               </button>
             </li>
             <li>
               <button
-                className={`${classes["btn"]} ${classes["btn--main"]} ${classes["nav-button"]}`}>
+                className={`${classes["btn"]} ${classes["btn--main"]} ${classes["nav-button"]}`}
+                onClick={props.openRegister}>
                 Register
               </button>
             </li>
