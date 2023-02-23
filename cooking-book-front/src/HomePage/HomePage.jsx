@@ -1,14 +1,16 @@
 import { useRef, useEffect, useState } from "react";
+
+import classes from "./HomePage.module.css";
+
 import HeroSection from "./HeroSection/HeroSection";
 import CardSection from "./CardsSection/CardsSection";
 import CreateSection from "./CreateSection/CreateSection";
 import ReviewsSection from "./ReviewsSection/ReviewsSection";
 import CallToAction from "./CallToAction/CallToAction";
 import AccordionSection from "./AccordionSection/AccordionSection";
-import classes from "./HomePage.module.css";
-import classes2 from "./HeroSection/HeroSection.module.css";
 import RegisterModal from "./RegisterModal/RegisterModal";
 import LoginModal from "./RegisterModal/LoginModal";
+
 function HomePage() {
   const heroRef = useRef(null);
   const headerRef = useRef(null);
@@ -16,22 +18,31 @@ function HomePage() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   useEffect(() => {
-    if (heroRef && headerRef) {
+    if (heroRef) {
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            headerRef.current.classList.add(classes.hidden);
-          } else {
-            headerRef.current.classList.remove(classes.hidden);
-          }
-        });
+        if (headerRef && headerRef.current) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              headerRef.current.classList.add(classes.hidden);
+            } else {
+              headerRef.current.classList.remove(classes.hidden);
+            }
+          });
+        }
       });
+
       observer.observe(heroRef.current);
     }
-  }, []);
+  }, [isLoginOpen, isRegisterOpen]);
 
   const openLogin = () => {
     setIsLoginOpen(true);
+  };
+
+  const closeLogin = (event) => {
+    if (event.currentTarget === event.target) {
+      setIsLoginOpen(false);
+    }
   };
 
   const openRegister = () => {
@@ -46,31 +57,35 @@ function HomePage() {
 
   return (
     <>
-      {isRegisterOpen && <LoginModal closeRegister={closeRegister} />}
+      {isLoginOpen && <LoginModal closeLogin={closeLogin} />}
       {isRegisterOpen && <RegisterModal closeRegister={closeRegister} />}
-      <header className={`${classes["hero-header"]} `} ref={headerRef}>
-        <div className={classes2["hero-logo"]}>
-          <img src="/images/logo.png" className={classes2["logo-image"]} />
-        </div>
-        <nav>
-          <ul className={classes2["nav-list"]}>
-            <li>
-              <button
-                className={`${classes2["btn"]} ${classes2["btn--secondary"]} ${classes2["nav-button"]}`}
-                onClick={openLogin}>
-                Login
-              </button>
-            </li>
-            <li>
-              <button
-                className={`${classes2["btn"]} ${classes2["btn--main"]} ${classes2["nav-button"]}`}
-                onClick={openRegister}>
-                Register
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      {!isLoginOpen && !isRegisterOpen && (
+        <header
+          className={`${classes["hero-header"]} ${classes["hidden"]}`}
+          ref={headerRef}>
+          <div className={classes["hero-logo"]}>
+            <img src="/images/logo.png" className={classes["logo-image"]} />
+          </div>
+          <nav>
+            <ul className={classes["nav-list"]}>
+              <li>
+                <button
+                  className={`${classes["btn"]} ${classes["btn--secondary"]} ${classes["nav-button"]}`}
+                  onClick={openLogin}>
+                  Login
+                </button>
+              </li>
+              <li>
+                <button
+                  className={`${classes["btn"]} ${classes["btn--main"]} ${classes["nav-button"]}`}
+                  onClick={openRegister}>
+                  Register
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      )}
       <HeroSection
         heroRef={heroRef}
         openLogin={openLogin}
