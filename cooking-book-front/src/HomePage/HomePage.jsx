@@ -8,8 +8,8 @@ import CreateSection from "./CreateSection/CreateSection";
 import ReviewsSection from "./ReviewsSection/ReviewsSection";
 import CallToAction from "./CallToAction/CallToAction";
 import AccordionSection from "./AccordionSection/AccordionSection";
-import RegisterModal from "./RegisterModal/RegisterModal";
-import LoginModal from "./RegisterModal/LoginModal";
+import RegisterModal from "./Modals/RegisterModal";
+import LoginModal from "./Modals/LoginModal";
 
 function HomePage() {
   const buttonRef = useRef(null);
