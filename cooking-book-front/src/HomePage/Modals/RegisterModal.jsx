@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import axios from "axios";
 import classes from "./Modals.module.css";
-
+import baseUrl from "../../Url";
 function RegisterModal(props) {
   const refName = useRef(null);
   const refPass = useRef(null);
@@ -71,17 +71,16 @@ function RegisterModal(props) {
     }
 
     try {
-      const resp = await axios.post(
-        "https://localhost:44371/api/user/register",
-        userToRegister
-      );
+      const resp = await axios.post(`${baseUrl}/user/register`, userToRegister);
       alert("Account Created!");
       window.location.reload(false);
     } catch (err) {
       // username already exist
       refName.current.classList.add(classes.err);
       refName.current.value = "";
-      refName.current.placeholder = "User already exists";
+      refName.current.placeholder =
+        err.response.data.substring(0, 4) +
+        err.response.data.substring(18, err.response.data.length);
     }
   };
 

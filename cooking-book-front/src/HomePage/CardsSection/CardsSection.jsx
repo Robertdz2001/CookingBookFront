@@ -2,15 +2,13 @@ import classes from "./CardsSection.module.css";
 import { useEffect, useState } from "react";
 import Card from "./Card";
 import axios from "axios";
-
+import baseUrl from "../../Url";
 function CardsSection() {
   const [topRecipes, setTopRecipes] = useState(false);
 
   const getTopRecipes = async () => {
     try {
-      const response = await axios.get(
-        "https://localhost:44371/api/recipes/top"
-      );
+      const response = await axios.get(`${baseUrl}/recipes/top`);
 
       return response.data;
     } catch (err) {
@@ -22,7 +20,6 @@ function CardsSection() {
     async function getData() {
       const response = await getTopRecipes();
       setTopRecipes(response);
-      // console.log(topRecipes);
     }
     getData();
   }, []);
