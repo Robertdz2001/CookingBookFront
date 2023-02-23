@@ -12,6 +12,7 @@ import RegisterModal from "./RegisterModal/RegisterModal";
 import LoginModal from "./RegisterModal/LoginModal";
 
 function HomePage() {
+  const buttonRef = useRef(null);
   const heroRef = useRef(null);
   const headerRef = useRef(null);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
@@ -57,8 +58,12 @@ function HomePage() {
 
   return (
     <>
-      {isLoginOpen && <LoginModal closeLogin={closeLogin} />}
-      {isRegisterOpen && <RegisterModal closeRegister={closeRegister} />}
+      {isLoginOpen && (
+        <LoginModal closeLogin={closeLogin} buttonRef={buttonRef} />
+      )}
+      {isRegisterOpen && (
+        <RegisterModal closeRegister={closeRegister} buttonRef={buttonRef} />
+      )}
       {!isLoginOpen && !isRegisterOpen && (
         <header
           className={`${classes["hero-header"]} ${classes["hidden"]}`}

@@ -70,3 +70,8 @@
 .btn.btn--main.btn--form {
   width: 80%;
 }
+
+.err::placeholder {
+  color: rgba(255, 0, 0, 0.7);
+  font-size: 1.8rem;
+}
