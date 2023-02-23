@@ -1,5 +1,5 @@
 @import "../App.module.css";
-
+@import "../HomePage/HeroSection/HeroSection.module.css";
 .footer-text {
   text-align: center;
   font-size: 1.4rem;
