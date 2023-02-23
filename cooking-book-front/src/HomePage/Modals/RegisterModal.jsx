@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import axios from "axios";
-import classes from "./RegisterModal.module.css";
+import classes from "./Modals.module.css";
 
 function RegisterModal(props) {
   const refName = useRef(null);
@@ -81,7 +81,7 @@ function RegisterModal(props) {
       // username already exist
       refName.current.classList.add(classes.err);
       refName.current.value = "";
-      refName.current.placeholder = "user already exist";
+      refName.current.placeholder = "User already exists";
     }
   };
 
@@ -98,31 +98,31 @@ function RegisterModal(props) {
     <div className={classes.backdrop} onClick={props.closeRegister}>
       <dialog open className={classes.modal} onClick={deleteError}>
         <span className={classes["heading"]}>Register</span>
-        <form className={classes["register-form"]} onSubmit={registerUser}>
+        <form className={classes["form"]} onSubmit={registerUser}>
           <input
             type="text"
             name="userName"
-            className={classes["register-input"]}
+            className={classes["input"]}
             placeholder="User Name"
             ref={refName}
           />
           <input
             type="text"
             name="imageUrl"
-            className={classes["register-input"]}
+            className={classes["input"]}
             placeholder="Image Url"
           />
           <input
             type="password"
             name="password"
-            className={classes["register-input"]}
+            className={classes["input"]}
             placeholder="Password"
             ref={refPass}
           />
           <input
             type="password"
             name="confirmPassword"
-            className={classes["register-input"]}
+            className={classes["input"]}
             placeholder="Confirm Password"
             ref={refPassConf}
           />
