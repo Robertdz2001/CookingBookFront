@@ -23,9 +23,9 @@ function LoginModal(props) {
         const user = await axios.get(`${baseUrl}/user`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
-        console.log(user.data);
         localStorage.setItem("userInfo", JSON.stringify(user.data));
 
+        console.log(localStorage.getItem("token"));
         alert("Successfully logged in");
         navigate("/recipes");
       } catch (err) {

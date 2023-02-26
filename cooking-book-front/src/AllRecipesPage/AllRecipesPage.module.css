@@ -37,6 +37,7 @@
   padding: 0 1.6rem;
   position: relative;
   cursor: pointer;
+  user-select: none;
 }
 
 .option:hover::after {
@@ -50,4 +51,14 @@
   border-radius: 1rem;
   border: solid 0.5px #2b8a3e;
   white-space: nowrap;
+}
+
+.option:hover .icon {
+  background-color: #2b8a3e;
+  box-shadow: 0 0 0 1rem #2b8a3e;
+}
+
+.option:active .icon {
+  background-color: #0000;
+  box-shadow: none;
 }
