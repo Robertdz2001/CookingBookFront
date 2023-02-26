@@ -1,18 +1,60 @@
 import classes from "./AllRecipesPage.module.css";
 import { useNavigate } from "react-router-dom";
-
+import { useState, useEffect } from "react";
 import SearchSection from "./SearchSection/SearchSection";
-
+import baseUrl from "../Url";
+import axios from "axios";
+import CardsList from "./CardsList/CardsList";
 function AllRecipesPage() {
   const navigate = useNavigate();
+
+  const [searchParams, setSearchParams] = useState({
+    recipeName: "",
+    userName: "",
+    sortBy: 4,
+    descending: true,
+    pageNumber: 1,
+  });
+
+  const [recipes, setRecipes] = useState(false);
+
+  const [totalPages, setTotalPages] = useState(false);
+
+  const getRecipes = async () => {
+    try {
+      const searchParamsString = `?SearchByRecipeName=${searchParams.recipeName}&SearchByUserName=${searchParams.userName}&SortBy=${searchParams.sortBy}&SortByDescending=${searchParams.descending}&PageNumber=${searchParams.pageNumber}&PageSize=6`;
+
+      const response = await axios.get(
+        `${baseUrl}/recipes` + searchParamsString,
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      );
+      return response.data;
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    async function getData() {
+      const response = await getRecipes();
+      setRecipes(response.items);
+      setTotalPages(response.totalPages);
+    }
+    getData();
+  }, []);
 
   const logout = () => {
     navigate("/");
     localStorage.clear();
   };
 
+  if (!recipes) return <>Loading</>;
+
   return (
     <>
+      {console.log(totalPages)}
       <header className={classes["all-header"]}>
         <img src="/images/logo.png" className={classes["logo-image"]} />
         <ul className={classes["header-list"]}>
@@ -77,6 +119,7 @@ function AllRecipesPage() {
         </ul>
       </header>
       <SearchSection />
+      <CardsList recipes={recipes} />
     </>
   );
 }
