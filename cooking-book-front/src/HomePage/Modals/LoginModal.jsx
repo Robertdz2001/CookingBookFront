@@ -29,10 +29,10 @@ function LoginModal(props) {
         alert("Successfully logged in");
         navigate("/recipes");
       } catch (err) {
-        console.log(err);
+        alert(err.response.data);
       }
     } catch (err) {
-      console.log(err);
+      alert(err.response.data);
     }
   };
 

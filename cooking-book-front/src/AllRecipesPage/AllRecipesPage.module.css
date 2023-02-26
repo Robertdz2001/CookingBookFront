@@ -1,0 +1,53 @@
+@import "../HomePage/HomePage.module.css";
+
+.all-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.4rem;
+  background-color: rgba(222, 222, 222, 0.8);
+}
+
+.icon {
+  height: 50%;
+  border-radius: 10rem;
+  /* background-color: #fff; */
+}
+
+.option:last-child {
+  border: none;
+}
+
+.header-list {
+  display: grid;
+  align-items: center;
+  border-radius: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #2f9e44;
+  border: solid 2px #2b8a3e;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 7rem;
+  height: 100%;
+  border-right: solid 2px #2b8a3e;
+  padding: 0 1.6rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.option:hover::after {
+  position: absolute;
+  bottom: 0;
+  transform: translate(0, 120%);
+  content: attr(con);
+  background-color: #f0f0f0;
+  display: block;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  border: solid 0.5px #2b8a3e;
+  white-space: nowrap;
+}
