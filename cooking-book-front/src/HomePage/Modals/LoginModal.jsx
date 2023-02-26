@@ -1,8 +1,11 @@
 import classes from "./Modals.module.css";
 import axios from "axios";
 import baseUrl from "../../Url";
+import { useNavigate } from "react-router-dom";
 
 function LoginModal(props) {
+  const navigate = useNavigate();
+
   const loginUser = async (event) => {
     event.preventDefault();
 
@@ -24,6 +27,7 @@ function LoginModal(props) {
         localStorage.setItem("userInfo", JSON.stringify(user.data));
 
         alert("Successfully logged in");
+        navigate("/recipes");
       } catch (err) {
         console.log(err);
       }
