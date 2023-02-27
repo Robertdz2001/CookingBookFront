@@ -20,6 +20,10 @@ function AllRecipesPage() {
 
   const [totalPages, setTotalPages] = useState(false);
 
+  const changeSearchParams = (newSearchParams) => {
+    setSearchParams(newSearchParams);
+  };
+
   const getRecipes = async () => {
     try {
       const searchParamsString = `?SearchByRecipeName=${searchParams.recipeName}&SearchByUserName=${searchParams.userName}&SortBy=${searchParams.sortBy}&SortByDescending=${searchParams.descending}&PageNumber=${searchParams.pageNumber}&PageSize=6`;
@@ -38,12 +42,13 @@ function AllRecipesPage() {
 
   useEffect(() => {
     async function getData() {
+      console.log("Drugi raz");
       const response = await getRecipes();
       setRecipes(response.items);
       setTotalPages(response.totalPages);
     }
     getData();
-  }, []);
+  }, [searchParams]);
 
   const logout = () => {
     navigate("/");
@@ -54,7 +59,6 @@ function AllRecipesPage() {
 
   return (
     <>
-      {console.log(totalPages)}
       <header className={classes["all-header"]}>
         <img src="/images/logo.png" className={classes["logo-image"]} />
         <ul className={classes["header-list"]}>
@@ -118,7 +122,7 @@ function AllRecipesPage() {
           </li>
         </ul>
       </header>
-      <SearchSection />
+      <SearchSection onSearchParamsChange={changeSearchParams} />
       <CardsList recipes={recipes} />
     </>
   );

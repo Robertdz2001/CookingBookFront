@@ -1,29 +1,54 @@
 import classes from "./SearchSection.module.css";
 
-function SearchSection() {
+function SearchSection(props) {
+  const changeSearchParams = (event) => {
+    event.preventDefault();
+    console.log(event.target.recipeName.value);
+    console.log(event.target.userName.value);
+    const newSearchParams = {
+      recipeName: event.target.recipeName.value,
+      userName: event.target.userName.value,
+      sortBy: event.target.sortBy.value,
+      descending: event.target.descending.value,
+      pageNumber: 1,
+    };
+    props.onSearchParamsChange(newSearchParams);
+  };
+
   return (
     <section className={`${classes["search-section"]} ${classes["container"]}`}>
       <h1 className={classes["search-header"]}>SEARCH FOR RECIPES</h1>
-      <form className={classes["search-form"]}>
+      <form className={classes["search-form"]} onSubmit={changeSearchParams}>
         <div className={classes["search-form-inputs"]}>
-          <input type="text" className={classes["search-form-input"]} />
-          <input type="text" className={classes["search-form-input"]} />
+          <input
+            type="text"
+            className={classes["search-form-input"]}
+            name="recipeName"
+          />
+          <input
+            type="text"
+            className={classes["search-form-input"]}
+            name="userName"
+          />
         </div>
         <div className={classes["search-form-selections"]}>
-          <select className={classes["search-form-select"]}>
-            <option value="name">name</option>
-            <option value="prep">prep</option>
-            <option value="kcal">kcal</option>
-            <option value="date">date</option>
-            <option value="rate">rate</option>
+          <select
+            className={classes["search-form-select"]}
+            name="sortBy"
+            defaultValue="4">
+            <option value="0"> name </option>
+            <option value="1"> prep </option>
+            <option value="2"> kcal </option>
+            <option value="3"> date </option>
+            <option value="4">rate</option>
           </select>
-          <select className={classes["search-form-select"]}>
-            <option value="des">des</option>
-            <option value="asc">asc</option>
+          <select className={classes["search-form-select"]} name="descending">
+            <option value="true"> des </option>
+            <option value="false"> asc </option>
           </select>
         </div>
         <button
-          type="submit"
+          type="Submit"
           className={`${classes["btn"]} ${classes["btn--main"]} ${classes["search-button"]}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -5,15 +5,18 @@ function CardsList(props) {
     <ul className={classes["cards"]}>
       {props.recipes.map((recipe) => {
         return (
-          <li>
+          <li key={"card" + recipe.id}>
             <Card
-              key={"card" + recipe.id}
               recipeImg={recipe.imageUrl}
               title={recipe.name}
               user={recipe.user.userName}
               userImg={recipe.user.imageUrl}
               calories={recipe.calories}
-              rating={0.5 * (recipe.recipeRating / recipe.reviews.length) + 2.5}
+              rating={
+                recipe.reviews.length !== 0
+                  ? 0.5 * (recipe.recipeRating / recipe.reviews.length) + 2.5
+                  : 0
+              }
               time={recipe.prepTime}
               reviewsCount={recipe.reviews.length}
             />
