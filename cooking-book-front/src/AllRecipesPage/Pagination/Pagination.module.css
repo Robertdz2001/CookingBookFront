@@ -1,0 +1,49 @@
+.pagination {
+  margin: 10rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  user-select: none;
+}
+
+.arrow {
+  display: block;
+  height: 4rem;
+  stroke: #2f9e44;
+  border: solid 1px #2f9e44;
+  border-radius: 50%;
+  padding: 0.8rem;
+  outline: none;
+}
+
+.btn--arrow:hover .arrow {
+  stroke: #fff;
+  background-color: #2f9e44;
+  border-radius: 10rem;
+}
+
+.btn--number {
+  font-size: 1.6rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  align-self: center;
+  padding: 1rem;
+  outline: none;
+}
+
+.btn--number:hover,
+.active {
+  color: #fff;
+  background-color: #2f9e44;
+  border-radius: 10rem;
+}
+
+.btn--number,
+.btn--arrow {
+  border: none;
+}
+
+.btn--arrow:hover,
+.btn--number:hover {
+  cursor: pointer;
+}

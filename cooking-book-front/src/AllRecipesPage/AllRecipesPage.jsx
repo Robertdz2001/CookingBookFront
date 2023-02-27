@@ -5,6 +5,8 @@ import SearchSection from "./SearchSection/SearchSection";
 import baseUrl from "../Url";
 import axios from "axios";
 import CardsList from "./CardsList/CardsList";
+import Pagination from "./Pagination/Pagination";
+
 function AllRecipesPage() {
   const navigate = useNavigate();
 
@@ -24,9 +26,19 @@ function AllRecipesPage() {
     setSearchParams(newSearchParams);
   };
 
+  const changePageNumber = (newPageNumber) => {
+    setSearchParams({
+      recipeName: searchParams.recipeName,
+      userName: searchParams.userName,
+      sortBy: searchParams.sortBy,
+      descending: searchParams.descending,
+      pageNumber: newPageNumber,
+    });
+  };
+
   const getRecipes = async () => {
     try {
-      const searchParamsString = `?SearchByRecipeName=${searchParams.recipeName}&SearchByUserName=${searchParams.userName}&SortBy=${searchParams.sortBy}&SortByDescending=${searchParams.descending}&PageNumber=${searchParams.pageNumber}&PageSize=6`;
+      const searchParamsString = `?SearchByRecipeName=${searchParams.recipeName}&SearchByUserName=${searchParams.userName}&SortBy=${searchParams.sortBy}&SortByDescending=${searchParams.descending}&PageNumber=${searchParams.pageNumber}&PageSize=1`;
 
       const response = await axios.get(
         `${baseUrl}/recipes` + searchParamsString,
@@ -123,6 +135,11 @@ function AllRecipesPage() {
       </header>
       <SearchSection onSearchParamsChange={changeSearchParams} />
       <CardsList recipes={recipes} />
+      <Pagination
+        totalPages={totalPages}
+        pageNumber={searchParams.pageNumber}
+        onPageNumberChange={changePageNumber}
+      />
     </>
   );
 }
