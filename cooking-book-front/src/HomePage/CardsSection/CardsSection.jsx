@@ -51,6 +51,7 @@ function CardsSection() {
               }
               time={recipe.prepTime}
               reviewsCount={recipe.reviews.length}
+              createdDate={recipe.createdDate.slice(0, 10)}
             />
           );
         })}

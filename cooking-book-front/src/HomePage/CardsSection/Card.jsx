@@ -9,6 +9,7 @@ function Card(props) {
 
       <div className={classes["card-content"]}>
         <div className={classes["card-author"]}>
+          <div className={classes.date}>{props.createdDate}</div>
           <img className={classes["card-author-img"]} src={props.userImg} />
           <div className={classes["card-author-info"]}>
             <span className={classes["created-by"]}>Created by:</span>

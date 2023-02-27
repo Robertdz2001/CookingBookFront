@@ -42,7 +42,6 @@ function AllRecipesPage() {
 
   useEffect(() => {
     async function getData() {
-      console.log("Drugi raz");
       const response = await getRecipes();
       setRecipes(response.items);
       setTotalPages(response.totalPages);

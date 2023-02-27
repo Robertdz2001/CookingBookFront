@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {console.log(localStorage)}
         <Route
           path="/recipes"
           element={
